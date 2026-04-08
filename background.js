@@ -19,7 +19,7 @@ function checkAndUpdateUrl(details) {
 }
 
 // Filtre pour ne déclencher ces événements que sur YouTube (optimise les performances de votre navigateur)
-const filter = { url: [{ hostContains: 'youtube.com' }] };
+const filter = { url: [{ hostContains: 'www.youtube.com' }] };
 
 // 1. Détecte les rechargements de page (F5) et les accès directs via la barre d'adresse
 chrome.webNavigation.onBeforeNavigate.addListener(checkAndUpdateUrl, filter);
